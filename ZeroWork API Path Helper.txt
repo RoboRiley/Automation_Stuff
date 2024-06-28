@@ -1,0 +1,38 @@
+// Note the {{element}} and {{apiresponse}} variables in the task. Element is in the task twice -- that is the part of the API response that you want to capture.  APIResponse is a copy and paste of an api response for whatever GET you are using. //
+
+## Context
+I need help finding the right way to reference nested responses from an API call using ZeroWork.  I will give you an example of how they do it and then give you the one I need help with.  
+
+##This is ZeroWork's example from their documentation.
+
+The API responds with:
+{
+    "id": "cmpl-GERzeJQ4lvqPk8SkZu4XMIuR",
+    "object": "text_completion",
+    "created": 1586839808,
+    "model": "text-davinci:003",
+    "choices": [
+        {
+            "text": “THIS IS THE ANSWER TO THE QUESTION THAT WE WANT TO SAVE"
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "length"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 5,
+        "completion_tokens": 7,
+        "total_tokens": 12
+    }
+}
+
+Their documentation says: "Any value inside a list marked by square brackets needs to be accessed with numbers where 0 corresponds to the first item, 1 to the second, etc. placed into square brackets. Any value inside a nested object marked by braces needs to be accessed with its key placed into square brackets.
+
+So, the record path to the 'text' element would be: choices[0]['text']"
+
+## TASK 
+I need the record path to the element {{element}}.  This is the API response that I need help with:
+
+{{apiresponse}}
+
+Please provide the record path I would use in ZeroWorks for the {{element}} element of that API response.
