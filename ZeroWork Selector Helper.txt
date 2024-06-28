@@ -1,4 +1,5 @@
 // Note the {{target}} and {{elements}} variables at the ver bottom of the prompt.  Target is a description of what you are trying to select, ideally with an example.  Elements is a copy and paste from the website inspect. I recommend going at least three levels up (out) from the element you actually want and getting a larger block of the website code to ensure your element will be unique.  If it fails a document.querySelectorAll test, then go up (out) a couple more levels and copy in more of the code. //
+// Most of this prompt is actually just copy and paste from the ZW documentation.  The prompt works because their documentation is excellent.  I did not write most of this. //
 
 ## Context
 I am trying to locate unique selectors for a list of items on a website.  This is for automation in software called ZeroWork.  Here is some of the ZeroWork documentation about selectors:
